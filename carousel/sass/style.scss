@@ -1,0 +1,28 @@
+.carousel-container {
+  display: flex;
+  position: relative;
+  transition: all .5s 0s linear;
+  width: 1280px;
+  height: 853px;
+  overflow: hidden;
+  .carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .5s 0s linear;
+    transform: translate(100%);
+    visibility: hidden;
+
+    &.active {
+      transform: translate(0);
+      visibility: visible;
+      z-index: 2;
+
+      &.toLeft {
+        transform: translate(-100%);
+        z-index: 1;
+        visibility: hidden;
+      }
+    }
+  }
+}
